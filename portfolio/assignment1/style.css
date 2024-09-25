@@ -1,0 +1,86 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	font-family: 'Palatino Linotype', sans-serif;
+	/*background: #84ad91;*/
+	background: rgb(238,174,202);
+	background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	background-size: 300% 300%;
+	color: #5e4b52;
+	animation: color 12s ease-in-out infinite; 
+}
+
+@keyframes color { 
+	0%{
+		background-position: 0 50%;
+		
+		
+		}
+	50%{
+		
+		background-position: 100% 50%;
+		
+	}
+	
+	100%{
+		background-position: 0 50%;
+		}
+	
+	
+	}
+
+
+div#container {
+	width: 900px;
+	margin: auto;
+	margin-top: 50px;
+	/*/border: 5px solid black;*/
+	padding: 20px;
+	background: #abe0bc;
+}
+
+header {
+	font-family: 'Arial Black', sans-serif;
+	
+
+transition-property: transform;
+transition-duration: 0.3s;
+transition-timing-function: ease;
+transition-delay: 0.3s;
+	
+	
+}
+
+/*hover  stuff*/
+
+header:hover {
+	transform: translateY(-10px);
+}
+
+
+footer {
+	font-size: 0.85em;
+	text-align: right;
+
+}
+
+header, footer {
+	background: #c9f0d5;
+	color: #d17194;
+	padding: 15px;
+	
+}
