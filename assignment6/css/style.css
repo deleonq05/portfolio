@@ -1,0 +1,141 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+body {
+	background: #c993a3;
+	color: #446e45;
+	
+}
+
+
+#container {
+
+}
+
+
+section {
+	/*border: 1px solid black;*/
+	
+}
+
+header, footer {
+	color: #c993a3;
+	background:#446e45; 
+}
+
+header {
+	padding: 10px;
+	font-size: 2em;
+	line-height: 1.6em;
+	font-family: "Pirata One", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+main header {
+	background: none;
+	color: #314f32;
+	font-size: 1.2em;
+}
+
+main {
+	padding: 20px;
+	
+}
+
+p {
+	margin: 15px;
+	font-family: "Kavivanar", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	body {
+		background: url(../img/gradient.jpg)
+	}
+	
+	#container {
+
+		width: 725px;
+		margin: auto;
+	}
+
+	header, footer {
+		background: none;
+
+	}
+
+	#container>header h1 {
+		color:magenta;
+	}
+
+
+	section#writing {
+border: 0px;
+background: rgba(255,255,255,0.7);
+padding-bottom: 20px;
+
+	}
+
+	footer {
+		color: white;
+		text-align: right;
+		padding-bottom: 2em;
+	}
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+
+	#container {
+		WIDTH: 1000px;
+	}
+	section#writing {
+
+		float:left;
+		width: 43%;
+	}
+	
+	section#MyWriting {
+float: right;
+width: 45%;
+	}
+
+	footer {
+		clear: both;
+	}
+	
+} /* closes 1024px+ */
+
+
+
