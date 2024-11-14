@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Monkeys on the internet</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+      <div class="wrapper">
+
+            <div class="outer-content">
+                  <div class="title">
+                        <h1 id="h1Content" style="display: none;">Monkeys on the Internet</h1>
+                        <!-- Initially hide the h1 -->
+                  </div>
+            </div>
+
+            <button id="showButton">Click me!</button>
+      </div>
+
+      <div class="menu-strip">
+            <div class="toggle-btn">
+                  <ion-icon name="menu"></ion-icon>
+            </div>
+      </div>
+
+      <div class="menu">
+
+            <div class="images">
+                  <span class="bg bg1 hide"></span>
+                  <span class="bg bg2 hide"></span>
+                  <span class="bg bg3 hide"></span>
+                  <span class="bg bg4 hide"></span>
+                  <span class="bg bg5 hide"></span>
+
+            </div>
+
+
+
+            <div class="nav">
+                  <div class="menu">
+                        <ul>
+                              <li class="menu-item-1">
+                                    <span id="order">01. </span>
+                                    <span id="menu">Swag</span>
+
+                              </li>
+                              <li class="menu-item-2">
+                                    <span id="order">02. </span>
+                                    <span id="menu">Anger</span>
+
+                              </li>
+                              <li class="menu-item-3">
+                                    <span id="order">03. </span>
+                                    <span id="menu">&nbsp;Thinking</span>
+
+                              </li>
+                              <li class="menu-item-4">
+                                    <span id="order">04. </span>
+                                    <span id="menu">&nbsp;Love</span>
+
+                              </li>
+                              <li class="menu-item-5">
+                                    <span id="order">05. </span>
+                                    <span id="menu">Sad</span>
+
+                              </li>
+                        </ul>
+                  </div>
+
+            </div>
+
+      </div>
+      </div>
+
+      <script type="text/javascript">
+
+            jQuery(function () {
+                  $(".menu-item-1").hover(function () {
+                        $(".bg1").fadeIn(800);
+                  }, function () {
+                        $(".bg1").fadeOut(800);
+                  })
+                  $(".menu-item-2").hover(function () {
+                        $(".bg2").fadeIn(800);
+                  }, function () {
+                        $(".bg2").fadeOut(800);
+                  })
+                  $(".menu-item-3").hover(function () {
+                        $(".bg3").fadeIn(800);
+                  }, function () {
+                        $(".bg3").fadeOut(800);
+                  })
+                  $(".menu-item-4").hover(function () {
+                        $(".bg4").fadeIn(800);
+                  }, function () {
+                        $(".bg4").fadeOut(800);
+                  })
+                  $(".menu-item-5").hover(function () {
+                        $(".bg5").fadeIn(800);
+                  }, function () {
+                        $(".bg5").fadeOut(800);
+                  })
+            })
+
+            var t1 = new TimelineMax({ paused: true });
+
+            t1.to(".outer-content .title", 1, {
+                  opacity: 0
+            });
+
+            t1.to(".menu", 2, {
+                  width: "45%",
+                  ease: Expo.easeInOut
+            }, "-=1");
+
+            t1.staggerFrom(".menu ul li", 2, { y: 20, opacity: 0, ease: Expo.easeInOut }, 0.1);
+
+            t1.to(".images", 2, {
+                  width: "45%",
+                  ease: Expo.easeInOut,
+                  delay: -2,
+            }, "-=1");
+
+            t1.reverse();
+            $(document).on("click", ".toggle-btn", function () {
+                  t1.reversed(!t1.reversed());
+            });
+            $(document).on("click", "#menu", function () {
+                  t1.reversed(!t1.reversed());
+            });
+
+            $(document).ready(function () {
+                  $("#hideButton").click(function () {
+                        $(this).hide();  // Hide the <h1> element when clicked
+                  });
+            });
+
+      </script>
+
+      <!-- Link to jQuery on Google CDN-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+      <script>
+            $(document).ready(function () {
+                  $("#showButton").click(function () {
+                        $("#h1Content").toggle();  // Toggle visibility of the <h1> content
+                  });
+            });
+      </script>
+
+</body>
+
+</html>
