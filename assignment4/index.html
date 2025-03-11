@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Talong</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<header>
+
+  <input type="checkbox" name="" id="toggler">
+  <label for="toggler" class="fas fa-bars"></label>
+
+  <a href="#" class="logo">Talong<span>.</span></a>
+
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="icons">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-shopping-cart"></a>
+    <a href="#" class="fas fa-user"></a>
+
+  </div>
+
+</header>
+
+
+<section class="home" id="home">
+  <div class="content">
+    <h3 class="glitch" data-text="The Best Filipino Restaurant in Chicago">The Best Filipino Restaurant in Chicago</h3>
+  <!-- <span>Food made with love</span>-->
+  <p class="glitch" data-text="Talong is a cozy Filipino restaurant nestled in the heart of Chicago, offering an authentic taste of the
+  Philippines with a modern twist. The restaurant's name, meaning eggplant in Tagalog, reflects its commitment to
+  highlighting the diverse and vibrant flavors of Filipino cuisine. From savory adobo and sizzling sisig to creamy
+  leche flan, Talong serves up delicious comfort food that will make you feel like you're dining at a friend's house.
+  Whether you're a Filipino food aficionado or a newcomer to the cuisine, Talong promises a warm and inviting
+  atmosphere, perfect for sharing a meal and creating memories.">Talong is a cozy Filipino restaurant nestled in the heart of Chicago, offering an authentic taste of the
+    Philippines with a modern twist. The restaurant's name, meaning "eggplant" in Tagalog, reflects its commitment to
+    highlighting the diverse and vibrant flavors of Filipino cuisine. From savory adobo and sizzling sisig to creamy
+    leche flan, Talong serves up delicious comfort food that will make you feel like you're dining at a friend's house.
+    Whether you're a Filipino food aficionado or a newcomer to the cuisine, Talong promises a warm and inviting
+    atmosphere, perfect for sharing a meal and creating memories.</p>
+    <a href="#" class="btn">Order now</a>
+  </div>
+
+
+</section>
+
+
+<div class="eat-text">eat!eat!eat!</div>
+
+
+
+<body>
+
+  <div id="container">
+
+    <div id="gif-overlay"></div>
+
+
+
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+    $(document).ready(function () {
+
+      setTimeout(function() {
+      $(".home .content h3").addClass("glitch");
+    }, 000); 
+
+
+    }); //close .ready()
+  </script>
+
+<script>
+  $(document).ready(function() {
+
+    setTimeout(function() {
+      $("header .navbar").addClass("nav-shake");
+    }, 5000); 
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+      $("header .navbar").addClass("nav-shake");
+    }, 5000);  
+    setTimeout(function() {
+      $("header .navbar").removeClass("nav-shake").addClass("nav-fall");
+    }, 7000);  
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".logo").addClass("logo-spin-bounce");
+    }, 6000);  
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".icons a").addClass("icon-spin");
+    }, 6000);  
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".eat-text").addClass("eat-text-show");
+    }, 5000); 
+  });
+</script>
+<script>
+  setTimeout(function() {
+    document.body.classList.add("shake-and-color-change");
+  }, 7000); 
+</script>
+
+<script>
+  setTimeout(function() {
+    document.querySelector('.btn').classList.add("enlarge-rotate");
+  }, 3000); 
+</script>
+
+<script>
+  setTimeout(function() {
+    const gifOverlay = document.getElementById('gif-overlay');
+    gifOverlay.style.opacity = 1; 
+    gifOverlay.style.animation = 'showGif 2s ease-out forwards'; 
+  }, 8000); 
+</script>
+
+</body>
+
+</html>

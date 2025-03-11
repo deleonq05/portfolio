@@ -1,0 +1,640 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+
+.btn:hover{
+
+    background: purple;
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #333; 
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: purple;
+}
+
+
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+
+}
+
+header .navbar a:hover {
+    color: purple;
+
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+
+}
+
+
+header .icons a:hover {
+
+    color:purple;
+}
+
+header #toggler {
+
+    display: none;
+}
+
+header .fa-bars {
+font-size: 3rem;
+color: #333;
+border-radius: .5rem;
+padding: .5rem 1.5rem;
+cursor: pointer;
+border: .1rem solid rgba(0,0,0,.3);
+display: none;
+
+
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    background: url(../img/food3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    padding: 10px;
+    padding-top: 100px; 
+    transition: background-color 1s ease-in-out;
+
+}
+
+.home .content {
+    max-width: 150rem;
+    padding: 5rem;
+    color: #333; 
+    position: relative; 
+    z-index: 2; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+
+
+
+
+.home .content span {
+    font-size: 3.5rem;
+    color: purple;
+    padding: 1rem 0;
+    line-height: 1.5;
+
+
+}
+
+.home .content p {
+    font-size: 3.5rem;
+    color: #333;
+    padding: 1rem 0;
+    line-height: 1.5;
+
+
+}
+
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+    
+}
+
+
+nav a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #fff; 
+    transition: background-color 1s ease-in-out;
+    position: relative;
+	
+}
+
+@keyframes shakeBackground {
+    0% {
+      transform: translateX(0); 
+    }
+    25% {
+      transform: translateX(-10px); 
+    }
+    50% {
+      transform: translateX(10px); 
+    }
+    75% {
+      transform: translateX(-10px); 
+    }
+    100% {
+      transform: translateX(10px); 
+    }
+  }
+
+
+  @keyframes changeBackgroundColor {
+    0% {
+      background-color: #fff; 
+    }
+    25% {
+      background-color: #ff5733; 
+    }
+    50% {
+      background-color: #33c1ff; 
+    }
+    75% {
+      background-color: #ff33a1; 
+    }
+    100% {
+      background-color: #33ff57; 
+    }
+  }
+
+  
+  .shake-and-color-change {
+    animation: shakeBackground 1s ease-in-out, changeBackgroundColor 5s ease-in-out;
+    animation-delay: 3s; 
+    animation-iteration-count: 1; 
+  }
+
+#container {
+	
+}
+
+
+.eat-text {
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100vw;            
+    height: 100vh;          
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+    font-size: 60rem;      
+    font-weight: bold;      
+    color: red;          
+    opacity: 0;              
+    visibility: hidden;   
+    text-align: center;      
+  
+}
+
+
+#gif-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/hell.gif') no-repeat center center;
+    background-size: cover;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+    z-index: 1000; 
+  }
+
+  @keyframes showGif {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
+@keyframes enlargeRotate {
+    0% {
+      transform: scale(1) rotate(0deg); 
+    }
+    50% {
+      transform: scale(1.5) rotate(180deg); 
+    }
+    100% {
+      transform: scale(1) rotate(360deg); 
+    }
+  }
+
+
+  .enlarge-rotate {
+    animation: enlargeRotate 2s ease-in-out 1; 
+    animation-delay: 3s;
+  }
+
+  @keyframes flashAndBounce {
+    0% {
+      opacity: 1;            
+      transform: translateY(0); 
+    }
+    50% {
+      opacity: 0;            
+      transform: translateY(-30px); 
+    }
+    100% {
+      opacity: 1;            
+      transform: translateY(0); 
+    }
+  }
+  
+  .eat-text-show {
+    opacity: 1;
+    visibility: visible;
+    animation: flashAndBounce .5s ease-in-out infinite 5s; 
+  }
+  
+
+
+@keyframes spinIcons {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
+  
+
+  .icon-spin {
+    animation: spinIcons 2s linear infinite; 
+  }
+  
+
+@keyframes enlargeButton {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
+  
+
+  .btn-enlarge {
+    animation: enlargeButton 3s ease-in-out infinite; 
+  }
+
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  @keyframes enlarge {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.5); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
+  
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-30px); 
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-15px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+  .logo-spin-bounce {
+    animation: spin 2s linear, enlarge 2s ease-in-out, bounce 1s ease-in-out infinite;
+  }
+  
+
+
+  @keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.nav-shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0);  
+    }
+    100% {
+      transform: translateY(100vh);  
+      opacity: 0; 
+    }
+  }
+  
+
+  .nav-shake {
+    animation: shake 0.5s ease-in-out infinite;
+  }
+  
+  
+  .nav-fall {
+    animation: fall 1s ease-out forwards; 
+  }
+  
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .nav-shake {
+    animation: shake 0.5s ease-in-out infinite;
+  }
+
+
+@keyframes glitch {
+    0% {
+      transform: translateX(0);
+      clip-path: inset(0 0 0 0);
+    }
+    10% {
+      transform: translateX(-5px);
+      clip-path: inset(10% 0 10% 0);
+    }
+    20% {
+      transform: translateX(5px);
+      clip-path: inset(20% 0 20% 0);
+    }
+    30% {
+      transform: translateX(-5px);
+      clip-path: inset(30% 0 30% 0);
+    }
+    40% {
+      transform: translateX(5px);
+      clip-path: inset(40% 0 40% 0);
+    }
+    50% {
+      transform: translateX(-5px);
+      clip-path: inset(50% 0 50% 0);
+    }
+    60% {
+      transform: translateX(5px);
+      clip-path: inset(60% 0 60% 0);
+    }
+    70% {
+      transform: translateX(-5px);
+      clip-path: inset(70% 0 70% 0);
+    }
+    80% {
+      transform: translateX(5px);
+      clip-path: inset(80% 0 80% 0);
+    }
+    90% {
+      transform: translateX(-5px);
+      clip-path: inset(90% 0 90% 0);
+    }
+    100% {
+      transform: translateX(0);
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  .glitch {
+    position: relative;
+    display: inline-block;
+    font-size: 6rem; 
+    color: #333;
+  }
+  
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: purple;
+    animation: glitch 3s infinite linear alternate-reverse;
+    opacity: 0.8;
+  }
+
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for portrait tablets and large phone screens.  */
+@media all and (min-width: 600px) {
+	
+	
+	
+	
+} /* closes 600px+ */
+
+
+
+/* Minimum width for landscape laptops. */
+@media all and (max-width: 768px) {
+	
+html {
+    font-size: 55%;
+}	
+
+header {
+
+    padding: 2rem;
+}
+	
+
+header .fa-bars {
+    display:block;
+}
+
+header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right:0;
+    background: #eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+
+}
+
+header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    display: block;
+}
+
+} /* closes 768px+ */
+
+
+
+/* Minimum width for larger tablets, laptops and desktops. */
+@media all and (min-width: 992px) {
+	
+	
+	
+	
+} /* closes 992px+ */
+
+
+
+/* Minimum width for larger desktops. */
+@media all and (min-width: 1200px) {
+	
+	
+	
+	
+} /* closes 1200px+ */
+
+
+
