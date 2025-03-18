@@ -1,0 +1,165 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+  }
+  
+  html {
+	font-size: 1em;
+	line-height: 1.4em;
+  }
+  
+  :root {
+	--animate-duration: 1s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+  }
+  
+  body {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../img/gingham\,.jpg");
+	font-family: DailyMoody;
+	height: 100%; 
+  }
+  
+  @font-face {
+	font-family: "DailyMoody";
+	src: url("../font/Daily\ Moody.otf");
+  }
+  
+  h1 {
+	padding-top: 30px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	z-index: 10;
+	animation: fadeIn 5s;
+  }
+  
+  #container {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	flex-grow: 1; 
+	padding-bottom: 100px; 
+  }
+  
+  figure {
+	margin: 0;
+  }
+  
+.picture {
+
+	padding-bottom: 50px;
+}
+
+  .tape {
+	position: absolute;
+	top: 120px;
+	left: 210px;
+	z-index: 10;
+  }
+  
+  .tape img {
+	width: 300px;
+	height: auto;
+	transform: rotate(-25deg);
+  }
+  
+  .second-tape {
+	top: 640px;
+	left: 920px;
+	transform: rotate(-5deg);
+  }
+  
+  .ripped {
+	position: absolute;
+	top: -55px;
+	left: 480px;
+	z-index: -10;
+	animation: fadeInLeftBig 1s;
+  }
+  
+  .paper {
+	position: absolute;
+	top: 900px;
+	left: 420px;
+	width: 500px;
+	height: 200px;
+	background-size: cover;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+  }
+  
+  .paper-content {
+	overflow-y: auto;
+	max-height: 100%;
+  }
+  
+  p {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-size: 24px;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+  }
+  
+
+  #changeStyleButton {
+	background-color: #dac771; 
+	color: white; 
+	padding: 15px 32px; 
+	text-align: center; 
+	text-decoration: none; 
+	display: inline-block; 
+	font-size: 16px; 
+	border: none; 
+	border-radius: 8px; 
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+	cursor: pointer; 
+	transition: all 0.3s ease; 
+	margin-top: auto; 
+	margin-bottom: 20px; 
+	
+  }
+  
+  #changeStyleButton:hover {
+	background-color: #ae9f5a; 
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  }
+
+  .night-picture {
+
+	padding-bottom: 50px;
+  }
+  
+  @keyframes fadeInLeftBig {
+	from {
+	  opacity: 0;
+	  -webkit-transform: translate3d(-2000px, 0, 0);
+	  transform: translate3d(-2000px, 0, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+  
+	to {
+	  opacity: 1;
+	}
+  }
+  

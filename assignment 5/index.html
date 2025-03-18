@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>Assignment 5</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+<h1>The sun is out!</h1>
+
+
+<figure class="picture">
+
+	<img src="img/IMG_6233.JPG" alt="the sun's in your eyes" width="800" height="600">
+</figure>
+
+<figure class="night-picture">
+	<img src="img/IMG_4100.jpg" alt="Night image" width="800" height="600" style="display: none;">
+  </figure>
+
+<figure class="tape">
+	<img src="img/tape.jpeg" alt="tape">
+</figure>
+
+<figure class="tape second-tape">
+	<img src="img/tape.jpeg" alt="tape">
+  </figure>
+
+  <figure class="ripped">
+
+	<img src="img/ripped.png" width="500" height="200">
+
+  </figure>
+
+  <figure class="paper">
+
+	<img src="img/paper.jpg" alt="paper">
+
+  </figure>
+
+  <figure class="paper">
+	<div class="paper-content">
+	  <p>There's never a doubt in my mind that when the sun shines, my eyelashes will flutter open and 
+		I'll heave a sigh for another day. It's an innate need&mdash;to feel the sun through your bones. 
+		To bare yourself open, sternum facing upwards, nose tipped high, eyes closed. 
+		It feels good. The heat, the constant intensity, it feels immensely addictive. 
+		Only when I feel the sweat drip down to my forehead, do I ever wonder if it's too much.
+		Sometimes, I think it's a curse. To love something that you can't touch. I crave summer days, ice-cream dripping on the 
+		concrete floor, and the cicadas humming their songs. But the sun doesn't revolve around me. It will 
+		continue to come up and down, whether I get up or not. I need the sun, but it doesn't need me. 
+		There's distance between us. I need it, I plead with it, but I can never look at it for too long. 
+		It's a curse to care this much.
+	  </p>
+	</div>
+  </figure>
+
+
+  <button id="changeStyleButton">Good night</button>
+
+  </div><!-- close "container" -->
+
+
+  
+   <!-- Link to jQuery on Google Hosted Libraries-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  
+   <!-- Write your jQuery code inside of the .ready() function below -->
+   <script>
+$(document).ready(function() {
+  $('#changeStyleButton').click(function() {
+    if ($(this).text() === "Good night") {
+      $(this).text("Good morning"); 
+      
+
+      $('body').css('background-color', '#050505');
+      $('body').css('background-image', 'url("img/bgingham.jpg")'); 
+      $('body').css('color', '#69180e'); 
+      $('h1').text("Go to sleep"); 
+      
+  
+      $('img[src="img/IMG_6233.JPG"]').hide(); 
+      $('img[src="img/tape.jpeg"]').hide(); 
+
+
+      $('img[src="img/IMG_4100.jpg"]').show(); 
+      
+      
+      $('.paper-content').html(`
+        <p>It's night now. The stars are out, the world is quiet, and it's time to rest. 
+        Tomorrow is a new day full of possibilities. The sun will rise again soon, but for now, 
+        enjoy the peaceful silence of the night. Good night.</p>
+      `);
+      
+    } else {
+      $(this).text("Good night"); 
+      
+
+      $('body').css('background-color', 'white'); 
+      $('body').css('background-image', 'url("img/gingham,.jpg")'); 
+      $('body').css('color', 'black'); 
+      $('h1').text("The sun is out!"); 
+      
+    
+      $('img[src="img/IMG_6233.JPG"]').show(); 
+      $('img[src="img/tape.jpeg"]').show(); 
+
+  
+      $('img[src="img/IMG_4100.jpg"]').hide(); 
+      
+
+      $('.paper-content').html(`
+        <p>There's never a doubt in my mind that when the sun shines, my eyelashes will flutter open and 
+        I'll heave a sigh for another day. It's an innate need&mdash;to feel the sun through your bones. 
+        To bare yourself open, sternum facing upwards, nose tipped high, eyes closed. 
+        It feels good. The heat, the constant intensity, it feels immensely addictive. 
+        Only when I feel the sweat drip down to my forehead, do I ever wonder if it's too much.
+        Sometimes, I think it's a curse. To love something that you can't touch. I crave summer days, ice-cream dripping on the 
+        concrete floor, and the cicadas humming their songs. But the sun doesn't revolve around me. It will 
+        continue to come up and down, whether I get up or not. I need the sun, but it doesn't need me. 
+        There's distance between us. I need it, I plead with it, but I can never look at it for too long. 
+        It's a curse to care this much.</p>
+      `);
+    }
+  });
+}); //close .ready()
+
+ </script>
+  
+
+</body>
+	
+</html> 
