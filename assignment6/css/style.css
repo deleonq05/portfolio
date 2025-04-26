@@ -1,0 +1,101 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+@font-face { font-family: Quentin; src: url('../fonts/Quentin.otf'); } 
+@font-face { font-family: OnlyYou; src: url('../fonts/Only_You_Handwritten_Free_Font.otf'); } 
+@font-face { font-family: SingAlong; src: url('../fonts/Singlong.otf'); } 
+
+
+
+
+body {
+	
+	
+}
+
+
+#container {
+
+}
+
+#tagaytay1, #tagaytay2 {
+	height: 600px;
+	
+}
+
+
+#tagaytay1 {
+	background:url('../img/tagaytay1.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+#tagaytay2 {
+	background:url('../img/tagaytay2.png')no-repeat fixed center;
+	background-size: cover;
+}
+
+
+
+header {
+	font-family: Quentin;
+}
+
+#one, #two {
+	padding: 40px;
+	text-align: center;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#onep, #twop {
+
+	padding: 50px;
+	font-family: "Schoolbell", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+.reveal { 
+	opacity: 0; transform: translateY(30px); transition: all 1s ease; } .visible { 
+		opacity: 1; transform: translateY(0); 
+	
+	}
+
+	.scroll-effect { 
+		transition: all 0.5s ease; 
+	} 
+	
+	.scroll-effect { 
+		transition: all 0.3s ease; color: #000; /* default */ 
+		font-family: "Quentin", cursive; } 
+		
+		.scroll-effect.scrolled { 
+			color: #cc3333; 
+			font-family: 'OnlyYou', cursive; 
+			font-size: 1.5em; }
+
+	
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+

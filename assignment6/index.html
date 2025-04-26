@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Assignment 6</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+	<div id="container">
+
+		<div id="tagaytay1"></div>
+
+
+
+		<section id="one">
+			<header>
+				<h1 class="scroll-effect">There's this place...</h1>
+			</header>
+
+			<p id="onep" class="reveal" div class="fade-text">There's this place called Tagaytay. It's a city
+				in the province of Cavite in the Philippines. Through a number of viewpoint sites located across the
+				city, Tagaytay offers views of Taal Volcano Island in the center of Taal Lake in Batangas. In reference
+				to the Tagaytay Ridge, where the city is located, the Tagalog terms tagaytay or taytay, which mean
+				"mountain ridge" or "low mountain range," are the source of the name Tagaytay. It's beautiful, it really
+				is. It's one of the places in the Philippines where you can find a lighter breeze and many shades from
+				the
+				unrelentless, beating sun. It's a sanctuary for me and my family.
+			</p>
+		</section>
+
+
+
+		<div id="tagaytay2">
+
+		</div>
+
+		<section id="two">
+
+			<header>
+				<h1 class="scroll-effect">I dream of it some days...</h1>
+			</header>
+			<p id="twop" class="reveal" div class="fade-text">I dream of it some days. When I'm deep in sleep, tucked away in my bed, I often feel the sense
+				of light
+				precipitation. Light droplets falling around me, lulling me deeper into sleep. I dream of sweet
+				mangosteen
+				and ripe mangoes, my finger stained and sticky with the juices. I can just hear my mom next to me,
+				telling me
+				what differentiates good fruit to bad fruit. I still vex her with the same response, "Mom, I don't
+				understand the difference."
+				Even in sleep I can imagine the smell, my brain tells me it smells like car exhaust and grilled chicken
+				intenstines. It
+				smells like pool chlorine and freshly cut grass. My hand feels the grasp of family members, their
+				calloused hands grips mine.
+				I don't want to let go, but I do. When I wake up, I crave of sweet fruits and long for mountains sights.
+			</p>
+		</section>
+
+
+
+
+
+  <!-- Link to jQuery on Google CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+
+	</div><!-- close "container" -->
+	<script> $(document).ready(function () { function revealOnScroll() { $('.reveal').each(function () { var elementTop = $(this).offset().top; var windowBottom = $(window).scrollTop() + 
+		$(window).height(); if (elementTop < windowBottom - 100) { $(this).addClass('visible'); } }); } revealOnScroll(); $(window).on('scroll', revealOnScroll); }); </script>
+
+<script> $(document).ready(function () { $(window).on('scroll', function () { 
+	$('.scroll-effect').each(function () { var elTop = $(this).offset().top; var elBottom = elTop + $(this).outerHeight(); var scrollTop = $(window).scrollTop(); var windowBottom = scrollTop + $(window).height(); if (windowBottom > elTop + 50 && scrollTop < elBottom - 50) { $(this).addClass('scrolled'); } else { $(this).removeClass('scrolled'); } }); }); }); </script>
+</body>
+
+</html>
