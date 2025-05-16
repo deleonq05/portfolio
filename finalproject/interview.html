@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Home</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+    <header>
+      <nav class="navbar section-content">
+        <a href="index.html" class="nav-logo"><img src="img/likha.PNG" alt="Likha logo"
+            style="width:150px;height:100px;"> </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Studio</a></li>
+          <li class="nav-item"><a href="exhibit.html">Collection</a></li>
+          <li class="nav-item"><a href="interview.html">Sessions</a></li>
+          <li class="nav-item"><a href="contact.html">Collaborate</a></li>
+        </ul>
+      </nav>
+      <hr class="decorative-line">
+    </header>
+
+  <main>
+  <img src="img/vina.jpg" alt="Vina Kristine" class="center-image">
+   
+  <div class="button-container">
+  <a href="interviewtwo.html" class="next-artist-button">Next Artist</a>
+</div>
+
+  <div class="text-boxtwo">
+    <h2 class="subtitle">Vina Kristine</h2>
+
+    <p><strong>What kind of art medium do you do?</strong>
+      - Graphite/Pencil</p>
+
+    <p><strong>How did you start being an artist?</strong>
+      - I started my journey by imitating graphics, objects, and portraits of people. Until I improved a bit, but I found myself constantly drawn back to imitation. It felt safe, familiar. Developing my own style felt daunting, a leap into the unknown.</p>
+
+    <p><strong>Where do you take inspiration for your art?</strong>
+      - I don't have a particular person to take inspiration from, but I admire all people who draw. I always take a look at their works and appreciate all of it, finding inspiration in the diverse techniques and perspectives they offer. Nature, music, and everyday life also fuel my creativity; a fleeting glimpse of light, a captivating melody, or a meaningful moment. I draw inspiration from the world around me, constantly seeking new sights and experiences.</p>
+
+    <p><strong>Are there Filipino artists that you follow?</strong>
+      - Geloy Maligaya Concepcion, he's a photographer, artist, author, and illustrator. He's also a father and a husband of Bea from Going Bulilit!</p>
+
+    <p><strong>How does Philippine history influence your art?</strong>
+      - My art reflects not only the historical struggles of the Philippines but also the current events shaping the nation. It's a way for me to connect with fellow Filipinos, to give voice to our shared experiences, and to process the complexities of our present reality. I aspire to use my art as a platform to explore issues of social justice, environmental concerns, and the ongoing fight for progress in the Philippines.</p>
+
+    <p><strong>Do you feel a responsibility to represent Filipino culture or history through your art? Why or why not?</strong>
+      - Yes, I feel a responsibility to share Filipino stories, because art connects us and helps keep our culture alive.</p>
+
+    <p><strong>What themes or issues do you often explore in your pieces?</strong>
+      - I'm constantly amazed by the depth, beauty, and sheer power of the graphics I find on Pinterest.</p>
+
+    <p><strong>Can you share a specific work you've done that was deeply tied to Philippine history or social issues? What was your process behind it?</strong>
+      - I haven't yet created artwork specifically addressing Philippine history or social issues; my college studies currently consume most of my time.</p>
+
+    <p><strong>How does your personal background or community influence your work?</strong>
+      - My art classes have broadened my artistic horizons, exposing me to various styles like pointillism, geographic art, line art, and tattoo design; influencing my own work through assignments and explorations of these techniques.</p>
+
+    <p><strong>Do you believe art can create change in society? How have you seen that in your experience?</strong>
+      - I believe art absolutely can effect change in society. We've studied examples in class of art's power to inspire protest and raise awareness of important issues. My own artistic experiences have shown me how art can powerfully express emotions and ideas, shaping perspectives and potentially motivating action, even if that change isn't always immediate or dramatic.</p>
+
+    <p><strong>What does “purpose” mean to you when creating art?</strong>
+      - I don't always aim for a grand message in my art. Sometimes, it's about emotional release. Other times, it's about experimentation and discovery, as with my texture project. And sometimes, it's purely the satisfaction of creating something beautiful. It's all about the creative process, the exploration, and the connection it fosters.</p>
+
+    <p><strong>How do you navigate the balance between self-expression and audience impact in your creations?</strong>
+      - It's a constant juggling act. I begin with my own authentic expression, then consider how to best connect with my audience. This isn't about compromising my message, but making it accessible and engaging; the goal is to share my art authentically while inviting others in.</p>
+  </div>
+</main>
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+   <script>
+    $(document).ready(function() {
+      function animateGlow() {
+        $('.text-boxtwo').each(function() {
+          var $this = $(this);
+          var colors = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 0, 255)', 'rgb(255, 255, 0)', 'rgb(0, 255, 255)', 'rgb(255, 0, 255)'];
+          var index = 0;
+
+          // Trigger the glow effect when the page loads
+          setInterval(function() {
+            $this.css({
+              'border-color': colors[index],  // Change border color
+              'box-shadow': `0 0 20px 10px ${colors[index]} ` // Apply glowing shadow
+            });
+            index = (index + 1) % colors.length; // Cycle through RGB colors
+          }, 500);  // Adjust the interval speed as needed (500ms in this case)
+        });
+      }
+
+      animateGlow();  // Activate the glow effect when the page is ready
+    });
+  </script>
+
+
+</body>
+
+</html>

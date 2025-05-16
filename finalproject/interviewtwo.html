@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Home</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+ <header>
+      <nav class="navbar section-content">
+        <a href="index.html" class="nav-logo"><img src="img/likha.PNG" alt="Likha logo"
+            style="width:150px;height:100px;"> </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Studio</a></li>
+          <li class="nav-item"><a href="exhibit.html">Collection</a></li>
+          <li class="nav-item"><a href="interview.html">Sessions</a></li>
+          <li class="nav-item"><a href="contact.html">Collaborate</a></li>
+        </ul>
+      </nav>
+      <hr class="decorative-line">
+    </header>
+
+  <main>
+  <img src="img/oli.jpg" alt="David Oliveros" class="center-image">
+   
+  <div class="button-container">
+  <a href="interview.html" class="next-artist-button">Next Artist</a>
+</div>
+
+<div class="text-boxtwo">
+  <h2 class="subtitle">David Oliveros</h2>
+
+  <p><strong>What kind of art medium do you do?</strong>
+    - I do different types of styles using different mediums. I normally do portraiture with colored pencils, oil paint, and graphite.</p>
+
+  <p><strong>How did you start being an artist?</strong>
+    - I have been drawing since I can remember. My mom would always tell a story of me as a kid, where I use all the bond paper she bought so I could draw on it.</p>
+
+  <p><strong>Where do you take inspiration for your art?</strong>
+    - I normally take inspiration with other artists' work. Whenever I want to do a piece, I would visit a museum or would scroll through social media. I also take inspiration on things I saw randomly. Whether it's on TV or outside/nature.</p>
+
+  <p><strong>Are there Filipino artists that you follow?</strong>
+    - I have been following Fernando Amorsolo lately particularly with his portrait paintings since I do the same pieces right now.</p>
+
+  <p><strong>How does Philippine history influence your art?</strong>
+    - I think it has a big influence in my craft since I took pride with our national artists who shown the world what Filipinos can do. I also relate how they use their platform and craft to show our history, and to connect with people through their works.</p>
+
+  <p><strong>Do you feel a responsibility to represent Filipino culture or history through your art? Why or why not?</strong>
+    - I don't personally feel the urge of creating a piece that shows or represent our history. I think for me, art is not an obligation to represent something. For me, art is an expression of oneself and that's the beauty of it.</p>
+
+  <p><strong>What themes or issues do you often explore in your pieces?</strong>
+    - I normally do portraitures. But I also do some arts that shows social issues.</p>
+
+  <p><strong>Can you share a specific work you've done that was deeply tied to Philippine history or social issues? What was your process behind it?</strong>
+    - When I was in high school, we were asked to do a social realism where me and my team worked on the topic of war. I created this painting of a child holding a gun with the Philippine flag on the background split into two, where the blue part was changed into the ISIS flag. It was mainly about what happened in Marawi but also tapped an issue about war, where children are the ones being affected by it. They either die or hold a gun to fight for their life and their freedom.</p>
+
+  <p><strong>How does your personal background or community influence your work?</strong>
+    - Growing up, I'm glad that I was put in a school where my talents and ideas were welcomed. My teachers guided me on honing my talents and skills.</p>
+
+  <p><strong>Do you believe art can create change in society? How have you seen that in your experience?</strong>
+    - I believe art is a great tool to make a change in our society. You can use art to express yourself. To show the world what's going on and to inspire others to do good things.</p>
+
+  <p><strong>What does “purpose” mean to you when creating art?</strong>
+    - I think purpose for me is how you will be able to express yourself through your craft and inspire others. How you'd be able to connect with others through your art.</p>
+
+  <p><strong>How do you navigate the balance between self-expression and audience impact in your creations?</strong>
+    - I do believe that you don't work to impress a lot of audience. Just create and continue to do your craft that is authentic to you and you'll surely get the right audience with your craft and make an impact to them.</p>
+</div>
+</main>
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+   <script>
+    $(document).ready(function() {
+      function animateGlow() {
+        $('.text-boxtwo').each(function() {
+          var $this = $(this);
+          var colors = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 0, 255)', 'rgb(255, 255, 0)', 'rgb(0, 255, 255)', 'rgb(255, 0, 255)'];
+          var index = 0;
+
+          // Trigger the glow effect when the page loads
+          setInterval(function() {
+            $this.css({
+              'border-color': colors[index],  // Change border color
+              'box-shadow': `0 0 20px 10px ${colors[index]} ` // Apply glowing shadow
+            });
+            index = (index + 1) % colors.length; // Cycle through RGB colors
+          }, 500);  // Adjust the interval speed as needed (500ms in this case)
+        });
+      }
+
+      animateGlow();  // Activate the glow effect when the page is ready
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Home</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+ <header>
+      <nav class="navbar section-content">
+        <a href="index.html" class="nav-logo"><img src="img/likha.PNG" alt="Likha logo"
+            style="width:150px;height:100px;"> </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Studio</a></li>
+          <li class="nav-item"><a href="exhibit.html">Collection</a></li>
+          <li class="nav-item"><a href="interview.html">Sessions</a></li>
+          <li class="nav-item"><a href="contact.html">Collaborate</a></li>
+        </ul>
+      </nav>
+      <hr class="decorative-line">
+    </header>
+
+    <main>
+      <section class="image-text-wrapper">
+        <div class="image-box">
+          <img src="img/juanluna.jpg" alt="de Leon" id="slideshow" style="cursor:pointer;">
+        </div>
+        <hr class="decorative-line-vertical">
+        <div class="text-box">
+          <h2 class="subtitle">Juan Luna</h2>
+          <p>Juan Luna y Novicio (1857-1899) stands as one of the Philippines' most iconic historical and cultural
+            figures. Renowned not only for his extraordinary talent in painting but also for his passionate involvement
+            in the nationalist movements of the 19th century, Luna's life was a remarkable confluence of artistry,
+            intellect, and activism. His works, deeply influenced by both European classical traditions and his Filipino
+            identity, serve as enduring testaments to his skill and his aspirations for a liberated and dignified
+            Filipino nation.
+
+            But Juan Luna was more than just a painter; he was also an impassioned patriot and thinker. Alongside
+            contemporaries like Rizal, Marcelo H. del Pilar, and Graciano López Jaena, Luna was part of the Propaganda
+            Movement, a group of reformists advocating for political change and Filipino representation in the Spanish
+            Cortes. Although he used his brush more than his pen, Luna's art conveyed messages of resistance, identity,
+            and collective memory.
+
+          </p>
+
+          <p>Click through the pictures.</p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="section-content">
+          <ul class="contact-info-list">
+            <li class="contact-info">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <p>111 S Michigan Ave Chicago, IL 60603</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <p>info@likha.com</p>
+            </li>
+            <li class="contact-info">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <p>(123) 456-7890</p>
+            </li>
+          </ul>
+        </div>
+      </footer>
+
+    </main>
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+    $(document).ready(function () {
+      const images =
+        ["img/juanluna.jpg", "img/juanluna2.jpg", "img/juanluna3.jpg", "img/juanluna4.jpg", "img/juanluna5.JPG"]; let currentIndex = 0; $("#slideshow").on("click", function () { $(this).fadeOut(300, function () { currentIndex = (currentIndex + 1) % images.length; $(this).attr("src", images[currentIndex]).fadeIn(300); }); });
+
+
+
+
+
+    }); //close .ready()
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Exhibit 1</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="container">
+
+
+ <header>
+      <nav class="navbar section-content">
+        <a href="index.html" class="nav-logo"><img src="img/likha.PNG" alt="Likha logo"
+            style="width:150px;height:100px;"> </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Studio</a></li>
+          <li class="nav-item"><a href="exhibit.html">Collection</a></li>
+          <li class="nav-item"><a href="interview.html">Sessions</a></li>
+          <li class="nav-item"><a href="contact.html">Collaborate</a></li>
+        </ul>
+      </nav>
+      <hr class="decorative-line">
+    </header>
+
+    <main>
+     <section class="image-text-wrapper">
+  <div class="image-box">
+    <img src="img/IMG_4711.JPG" alt="de Leon" id="slideshow" style="cursor:pointer;">
+  </div>
+  <hr class="decorative-line-vertical">
+  <div class="text-box">
+    <h2 class="subtitle">The people of <span class="Likha">Chicago</span></h2>
+    <p>What makes the Chicago people interesting? The different paths they take in everyday life. Created by de
+      Leon, the photograph pieces focuses on Chicagoans. As a Filipino immigrant, de Leon feels as though
+      finding connection within a community can be a formidable force to be reckoned with.
+      But she found that, wherever she is, there will be people that she will come across that will offer her
+      kindness, offer her kinship. She'll meet these people once, maybe twice. Some stay in her life, some
+      doesn't. But it doesn't matter, what matters is that we're all here together, walking the path.</p>
+ 
+    <p>Click through the pictures.</p>
+    </div>
+</section>
+
+  <footer>
+    <div class="section-content">
+      <ul class="contact-info-list">
+        <li class="contact-info">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <p>111 S Michigan Ave Chicago, IL 60603</p>
+        </li>
+        <li class="contact-info">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <p>info@likha.com</p>
+        </li>
+        <li class="contact-info">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <p>(123) 456-7890</p>
+        </li>
+      </ul>
+    </div>
+  </footer>
+             
+    </main>
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google Hosted Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+ <script>
+  $(document).ready(function () { const images = 
+    [ "img/IMG_4711.JPG", "img/IMG_4714.JPG", "img/IMG_4721.JPG", "img/IMG_4730.JPG", "img/IMG_4725.JPG" ]; let currentIndex = 0; $("#slideshow").on("click", function () {$(this).fadeOut(300, function () { currentIndex = (currentIndex + 1) % images.length; $(this).attr("src", images[currentIndex]).fadeIn(300); }); }); 
+
+ }); //close .ready()
+</script>
+
+
+</body>
+
+</html
