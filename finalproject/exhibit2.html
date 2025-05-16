@@ -37,7 +37,7 @@
     <main>
       <section class="image-text-wrapper">
         <div class="image-box">
-          <img src="img/juanluna.jpg" alt="de Leon" id="slideshow" style="cursor:pointer;">
+          <img src="img/juanluna.jpg" alt="Juan Luna" id="slideshow" style="cursor:pointer;">
         </div>
         <hr class="decorative-line-vertical">
         <div class="text-box">
@@ -91,7 +91,7 @@
   <script>
     $(document).ready(function () {
       const images =
-        ["img/juanluna.jpg", "img/juanluna2.jpg", "img/juanluna3.jpg", "img/juanluna4.jpg", "img/juanluna5.JPG"]; let currentIndex = 0; $("#slideshow").on("click", function () { $(this).fadeOut(300, function () { currentIndex = (currentIndex + 1) % images.length; $(this).attr("src", images[currentIndex]).fadeIn(300); }); });
+        ["img/juanluna.jpg", "img/juanluna2.jpg", "img/juanluna3.jpg", "img/juanluna4.jpg", "img/juanluna5.jpg"]; let currentIndex = 0; $("#slideshow").on("click", function () { $(this).fadeOut(300, function () { currentIndex = (currentIndex + 1) % images.length; $(this).attr("src", images[currentIndex]).fadeIn(300); }); });
 
 
 
